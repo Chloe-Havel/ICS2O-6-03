@@ -24,7 +24,7 @@ const quote = async (URLAddress) => {
    const data = await result.json()
    console.log(data)
    document.getElementById("dog").innerHTML =
-   '<h4> dogs:0: </h4> <img src="' + data.message + '" alt="dog" />'
+   '<h4> weather: </h4> <img src="' + weather + '" alt="weather" />'
  } catch (error) {
    console.log(error)
  }
@@ -32,6 +32,6 @@ const quote = async (URLAddress) => {
 
 
 quote(
- "https://dog.ceo/api/breeds/image/random"
+ "https://api.openweathermap.org/data/2.5/weather?lat=45.4211435&lon=-75.6900574&appid=fe1d80e1e103cff8c6afd190cad23fa5"
 )
 
